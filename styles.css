@@ -1,0 +1,295 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+::-webkit-scrollbar{
+    background-color: rgb(190, 197, 197);
+}
+::-webkit-scrollbar-thumb{
+    background-color: #800080;
+    width: 5px;
+    height: 20px;
+    border-radius: 50px;
+    background-image: linear-gradient(#cf378b, #4b2037);
+
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #f1f1f1;
+
+}
+.header-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #552955;
+}
+.toggle-btn{
+    margin: 10px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.nav-wrap{
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+}
+.show-links{
+    height: 182px;
+    background-color: #f1f1f1;
+    z-index: 2;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #222;
+    font-size: 15px;
+}
+/* my slide*/
+.slide-section{
+    padding-top: 30px;
+    position: relative;
+    display: grid;
+}
+.slide-section::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.text-content{
+    position: absolute;
+    place-self: center;
+    color: #fff;
+    z-index: 2;
+    max-width: 300px;
+    margin-top: 30px;
+}
+.text-content button{
+    background-color: #800080;
+    color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+}
+.my-slides{
+    display: none;
+}
+section{
+    padding-top: 30px;
+}
+/*features section*/
+.head{
+    text-align: center;
+}
+.explore, .wwo{
+    color: #552955;
+    line-height: 0;
+}
+.feature-section{
+    background-color: #ccc;
+    display: grid;
+    place-items: center;
+}
+.features-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+}
+.feature{
+    text-align: center;
+    padding: 30px 5px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ .icon{
+    color: #552955;
+    font-size: 18px;
+}
+.feature button{
+    background-color: #800080;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+
+}
+.feature a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.offer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.offer{
+    text-align: center;
+    /*padding: 20px 30px;*/
+}
+/*about section*/
+.about{
+    display: grid;
+    place-items: center;
+    background-color: #ccc;
+}
+.about-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px;
+}
+.dreamlenx-image{
+    flex: 1;
+    order: 1;
+}
+.about-text{
+    flex: unset;
+    order: 2;
+}
+.btn{
+    background-color: #552955;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+button a{
+    text-decoration: none;
+    color: #fff;
+}
+footer a{
+    text-decoration: none;
+    color: #ffff;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #800080;
+    color: #fff;
+}
+.social a{
+    margin: 5px;
+    font-size: 15px;
+}
+@media only screen and (min-width:768px) {
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+    }
+    .nav-wrap{
+        height: auto;
+    }
+    .links{
+        padding: 10px 0;
+    }
+    nav ul li{
+        display: inline-block;
+        margin: 0 20px 0 20px;
+    }
+    .toggle-btn{
+        display: none;
+    }
+    /*my slide*/
+    .slide-container{
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+    .my-slide img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center 25%;
+        z-index: -1;
+    }
+    .section{
+        padding-top: 60px;
+    }
+    .heading{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    /*features section*/
+    .features-container{
+        display: flex;
+        gap: 30px;
+        padding: 30px 0px;
+    }
+    .feature{
+        width: 400px;
+    }
+    /*offer section*/
+    .offer-container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        place-items: center;
+    }
+    .dreamlenx-image{
+        max-width: 400px;
+        order: 2;
+    }
+    .about-text{
+        width: 400px;
+    }
+    /*footer section*/
+    footer{
+        justify-content: space-around;
+    }
+}
+
+
+/*about dreamlenx*/
+.about-dreamlenx{
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 10px;
+}
+strong{
+    color: #800080;
+}
+@media only screen and (max-width:768px) {
+    .about-dreamlenx{
+        font-size: 15px;
+    }
+    .feature{
+        max-width: 300px;
+    }
+}
+
+/*dl page*/
+.dlcoin-section{
+    min-height: 100vh;
+    margin-top: 30px;
+}
